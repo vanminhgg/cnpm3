@@ -1,0 +1,59 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}THÊM DANH SÁCH KHÁM{% endblock %}
+
+{% block content %}
+    <h1 class="text-center text-danger">LẬP HÓA ĐƠN</h1>
+
+    {% if err_msg %}
+    <div class="alert alert-danger">
+        {{ err_msg }}
+    </div>
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="PatientName">Họ và tên:</label>
+            <input type="text"
+                   name="PatientName"
+                   class="form-control"
+                   placeholder="Nhap họ và tên..."
+                   id="PatientName" required>
+        </div>
+        <div class="form-group">
+            <label for="drug_name">Thuốc:</label>
+            <input type="text"
+                   name="drug_name"
+                   class="form-control"
+                   placeholder=""
+                   id="drug_name" required>
+        </div>
+        <div class="form-group">
+            <label for="Soluong">Số lượng:</label>
+            <input type="text"
+                   name="Soluong"
+                   class="form-control"
+                   placeholder="Nhap Ngày sinh..."
+                   id="Soluong" required>
+        </div>
+        <div class="form-group">
+            <label for="Dongia">Đơn Giá:</label>
+            <input type="text"
+                   name="Dongia"
+                   class="form-control"
+                   placeholder="Nhap địa chỉ..."
+                   id="Dongia" required>
+        </div>
+        <div class="form-group">
+            <label for="Tongtien">Tổng tiền:</label>
+            <input type="text"
+                   name="Tongtien"
+                   class="form-control"
+                   placeholder="Nhap địa chỉ..."
+                   id="Tongtien" required>
+        </div>
+
+
+        <input type="submit" value="Thêm" class="btn btn-danger" />
+    </form>
+{% endblock %}

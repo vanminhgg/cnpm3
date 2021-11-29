@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Phòng Mạch DoctorCare</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/open-iconic-bootstrap.min.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/animate.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/owl.carousel.min.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/owl.theme.default.min.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/aos.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='magnific-popup.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='ionicons.min.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/bootstrap-datepicker.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/jquery.timepicker.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/flaticon.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/icomoon.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+
+
+
+
+
+    <link rel="stylesheet" href="templates/css/jquery.timepicker.css">
+    <link rel="stylesheet" href="templates/css/flaticon.css">
+    <link rel="stylesheet" href="templates/css/icomoon.css">
+    <link rel="stylesheet" href="templates/css/style.css">
+</head>
+<body>
+   <div class="">
+   {% block header %}
+       {% include 'header.html'%}
+   {% endblock %}
+   {% block content %}
+       <h1>my content</h1>
+   {% endblock %}
+   {% block footer %}
+       {% include 'footer.html' %}
+   {% endblock %}
+   </div>
+   <script src="{{ url_for('static',filename='js/jquery.min.js') }}"> </script>
+   <script src="{{ url_for('static',filename='js/jquery-migrate-3.0.1.min.js') }}"> </script>
+   <script src="{{ url_for('static',filename='js/popper.min.js') }}"> </script>
+   <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"> </script>
+   <script src="{{ url_for('static',filename='js/jquery.easing.1.3.js') }}"> </script>
+   <script src="{{ url_for('static',filename='js/jquery.waypoints.min.js') }}"> </script>
+   <script src="{{ url_for('static',filename='js/jquery.stellar.min.js') }}"> </script>
+   <script src="{{ url_for('static',filename='js/owl.carousel.min.js') }}"> </script>
+   <script src="{{ url_for('static',filename='js/jquery.magnific-popup.min.js') }}"> </script>
+   <script src="{{ url_for('static',filename='js/aos.js') }}"> </script>
+   <script src="{{ url_for('static',filename='js/jquery.animateNumber.min.js') }}"> </script>
+   <script src="{{ url_for('static',filename='js/bootstrap-datepicker.js') }}"> </script>
+   <script src="{{ url_for('static',filename='js/jquery.timepicker.min.js') }}"> </script>
+   <script src="{{ url_for('static',filename='js/scrollax.min.js') }}"> </script>
+   <script src="{{ url_for('static',filename='js/main.js') }}"> </script>
+
+</body>
+</html>

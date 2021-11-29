@@ -1,0 +1,76 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}DANG KY NGUOI DUNG{% endblock %}
+
+{% block content %}
+    <h1 class="text-center text-danger">LẬP PHIẾU KHÁM BỆNH</h1>
+
+    {% if err_msg %}
+    <div class="alert alert-danger">
+        {{ err_msg }}
+    </div>
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="Name">Họ và tên:</label>
+            <input type="text"
+                   name="Name"
+                   class="form-control"
+                   placeholder="Nhap họ và tên..."
+                   id="Name" required>
+        </div>
+        <div class="form-group">
+            <label for="TrieuChung">Triệu Chứng:</label>
+            <input type="text"
+                   name="TrieuChung"
+                   class="form-control"
+                   placeholder="Nhap triệu chứng..."
+                   id="TrieuChung" required>
+        </div>
+        <div class="form-group">
+            <label for="Loaibenh">Loại bệnh:</label>
+            <input type="text"
+                   name="Loaibenh"
+                   class="form-control"
+                   placeholder="Nhap loại bệnh..."
+                   id="Loaibenh" required>
+        </div>
+        <div class="form-group">
+            <label for="Drug">Thuốc:</label>
+            <input type="text"
+                   name="Drug"
+                   class="form-control"
+                   placeholder="Nhap loại thuốc..."
+                   id="Drug" required>
+        </div>
+        <div class="form-group">
+            <label for="Donvi">Đơn vị thuốc:</label>
+            <input type="text"
+                   name="Donvi"
+                   class="form-control"
+                   placeholder=""
+                   id="Donvi" required>
+        </div>
+        <div class="form-group">
+            <label for="Soluong">Số lượng:</label>
+            <input type="text"
+                   name="Soluong"
+                   class="form-control"
+                   placeholder="Nhap Số lượng..."
+                   id="Soluong" required>
+        </div>
+                <div class="form-group">
+            <label for="Use">Cách Dùng:</label>
+            <input type="text"
+                   name="Use"
+                   class="form-control"
+                   placeholder=""
+                   id="Use" required>
+        </div>
+
+
+
+        <input type="submit" value="DANG KY" class="btn btn-danger" />
+    </form>
+{% endblock %}

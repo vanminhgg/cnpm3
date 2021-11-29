@@ -1,0 +1,21 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}DANHSACHKHAM{% endblock %}
+
+{% block content %}
+<h1 class="text-center text-danger">Danh sách khám ngày</h1>
+<a href="/add-list-kham" class="btn btn-success" >Thêm</a>
+  {% for d in danhsachkham %}
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{ d.PatientName }}</h5>
+    <p class="card-text">Giới tính: {{ d.Sex }} </p>
+    <p class="card-text">Ngày sinh: {{ d.Birth }} Địa chỉ: {{ d.Address}} </p>
+    <a href="/add-phieu-kham" class="card-link">Lập phiếu khám bệnh</a>
+    <a href="/add-hoa-don" class="card-link">Lập Hóa Đơn</a>
+  </div>
+
+</div>
+  {% endfor %}
+
+{% endblock%}

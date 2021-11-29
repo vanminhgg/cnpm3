@@ -1,0 +1,18 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+{% if current_user.is_authenticated %}
+<h1 class="text-danger">THIS IS ADMIN PAGE</h1>
+<h2>Nguyễn Văn Minh</h2>
+<h2>Đỗ Văn Đức</h2>
+<h2>Trịnh Ngọc Khánh</h2>
+<h2>Trung Hảo</h2>
+{% else %}
+       {% include 'layout/login.html' %}
+{% endif%}
+{% block footer %}
+       {% include 'layout/footer.html' %}
+{% endblock %}
+
+{% endblock %}
+

@@ -1,0 +1,30 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}DANHSACHKHAM{% endblock %}
+
+{% block content %}
+ <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Họ và tên</th>
+        <th>Ngày Khám</th>
+        <th>Triệu chứng</th>
+        <th>Loại Bệnh</th>
+        <th>Thuốc</th>
+<!--        <th>Đơn vị </th>-->
+<!--        <th>Email</th>-->
+      </tr>
+    </thead>
+    <tbody>
+  {% for p in patient %}
+      <tr>
+        <td>{{p.Name}}</td>
+        <td>{{p.Ngaykham}}</td>
+        <td>{{p.TrieuChung}}</td>
+        <td>{{p.Loaibenh}}</td>
+        <td>{{p.Drug}}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock%}

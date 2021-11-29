@@ -1,0 +1,66 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}DANG KY NGUOI DUNG{% endblock %}
+
+{% block content %}
+    <h1 class="text-center text-danger">DANG KY NGUOI DUNG</h1>
+
+    {% if err_msg %}
+    <div class="alert alert-danger">
+        {{ err_msg }}
+    </div>
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="Name">Name:</label>
+            <input type="text"
+                   name="Name"
+                   class="form-control"
+                   placeholder="Nhap name..."
+                   id="Name" required>
+        </div>
+        <div class="form-group">
+            <label for="Username">Username:</label>
+            <input type="text"
+                   name="Username"
+                   class="form-control"
+                   placeholder="Nhap username..."
+                   id="Username" required>
+        </div>
+        <div class="form-group">
+            <label for="Password">Password:</label>
+            <input type="password"
+                   name="Password"
+                   class="form-control"
+                   placeholder="Nhap password..."
+                   id="Password" required>
+        </div>
+        <div class="form-group">
+            <label for="confirm-password">Confirm password:</label>
+            <input type="password"
+                   name="confirm-password"
+                   class="form-control"
+                   placeholder="Nhap confirm password..."
+                   id="confirm-password" required>
+        </div>
+                <div class="form-group">
+            <label for="Birth">Ngày Sinh:</label>
+            <input type="text"
+                   name="Birth"
+                   class="form-control"
+                   placeholder="Nhập Ngày Sinh..."
+                   id="Birth" required>
+        </div>
+                <div class="form-group">
+            <label for="Phonenumber">SDT:</label>
+            <input type="text"
+                   name="Phonenumber"
+                   class="form-control"
+                   placeholder="Nhap SDT..."
+                   id="Phonenumber" required>
+        </div>
+
+        <input type="submit" value="DANG KY" class="btn btn-danger" />
+    </form>
+{% endblock %}
